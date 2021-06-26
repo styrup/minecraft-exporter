@@ -9,4 +9,8 @@ services:
     ports:
     - 9700:8000
     volumes:
-    - /path/to/minecraft/world:/world:ro
+    - minecraft-data:/mcdata:ro
+
+volumes:
+  minecraft-data:
+    external: true
